@@ -8,12 +8,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var lableCounter: UILabel!
+    
+    
+    @IBAction func buttonPlusOne(_ sender: Any) {
+    }
+    
+    var countOfTap:Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        lableCounter.text = String(countOfTap)
+        
+        
+        }
+    @IBAction func buttonPlusOnePress() {
+        countOfTap += 1
+        print(countOfTap)
     }
 
 
 }
-
