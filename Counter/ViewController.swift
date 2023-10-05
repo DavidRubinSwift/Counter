@@ -11,21 +11,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var lableCounter: UILabel!
     
     
-    @IBAction func buttonPlusOne(_ sender: Any) {
-    }
-    
-    var countOfTap:Int = 0
+    var countOfTap:UInt = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        lableCounter.text = String(countOfTap)
         
         
         }
-    @IBAction func buttonPlusOnePress() {
+    
+    @IBAction func pressButtonPlus(_ sender: Any) {
         countOfTap += 1
-        print(countOfTap)
+        var count:String = "\(countOfTap)"
+        lableCounter.text = count
     }
-
-
+    
+    
+    
 }
+  
